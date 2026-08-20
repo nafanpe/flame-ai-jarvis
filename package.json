@@ -1,0 +1,17 @@
+{
+  "name": "flame-ai-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startall": "concurrently \"cd frontend && npm run dev\" \"cd backend && nodemon server.js\" \"cd engine && nodemon --ext py --exec ./venv/bin/python main.py\" "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "concurrently": "^10.0.4"
+  }
+}
