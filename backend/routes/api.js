@@ -1,3 +1,4 @@
+const eventBus = require('../utils/eventBus')   
 const express = require('express')
 const router = express.Router();
 
@@ -15,6 +16,16 @@ router.get('/api/logs', (req, res) => {
     }
     res.writeHead(200, headers)
     res.write("data: Stream Connected\n\n")
+
+    const logListener = (logMessage) => {
+        res.write(`data: ${logMessage}\n\n`)
+    }
+
+    eventBus.on('new_log', logListener)
+
+    req.on('close', () => {
+        eventBus.removeListener('new_log', logListener);
+    })
 })
 
 module.exports = router

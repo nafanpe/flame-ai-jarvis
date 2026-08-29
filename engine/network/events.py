@@ -1,7 +1,7 @@
 from .client import sio
 import threading
 from core.telemetry import get_system_stats
-from core.actions import handle_app_open
+from core.actions import handle_app_open, kill_process
 
 def broadcast_telemetry():
     while True:
@@ -23,3 +23,9 @@ def on_launch_app(data):
     app_name = data.get('app')
     print(f'command received, Launching {app_name}')
     handle_app_open(app_name)
+
+@sio.on('kill_process') # type: ignore
+def on_kill_process(data):
+    pid = data.get("pid")
+    if pid:
+        kill_process(pid)

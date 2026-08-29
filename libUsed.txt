@@ -1,5 +1,5 @@
 Frontend - nextjs, typescript
-Backend - nodejs, express, sse
+Backend - nodejs, express
 System - python
-Connection - Socket.io, Event Emitter
+Connection - Socket.io, SSE
 dev - Nodemon, Concurrently, sh-script
