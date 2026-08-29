@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import {socket} from "../lib/socketClient";
 import {TelemetryData} from "../types"
+import { kill } from "process";
 
 export const useSystemConnection = () => {
     const [status, setStatus] = useState('Disconnected')
@@ -9,6 +10,10 @@ export const useSystemConnection = () => {
     
     const launchApp = (appName: String) => {
         socket.emit('launch_app', {app: appName})
+    }
+
+    const killApp = (pid: number) => {
+        socket.emit('kill_process', {pid})
     }
 
     const UpdateBackendConnectionID = () => {
@@ -48,5 +53,5 @@ export const useSystemConnection = () => {
         }
     }, [])
 
-    return { status, telemetryData, logs, launchApp }
+    return { status, telemetryData, logs, launchApp, killApp }
 }

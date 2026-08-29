@@ -1,3 +1,9 @@
+export type ProcessData = {
+  'pid': number,
+  'name': string,
+  'cpu_percent': number,
+}
+
 export type TelemetryData = {
   'cpu': number,
   'ram': number,
@@ -7,5 +13,6 @@ export type TelemetryData = {
       'free': number,
       'usage': number,
   },
-  'time': string
+  'time': string,
+  'processes'? : ProcessData[]
 }

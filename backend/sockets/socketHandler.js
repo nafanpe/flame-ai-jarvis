@@ -24,6 +24,7 @@ const setupSockets = (io) => {
 
         handleSocketConnection(io, 'sys_telemetry', socket)
         handleSocketConnection(io, 'launch_app', socket)
+        handleSocketConnection(io, 'kill_process', socket)
     })
 }
 
