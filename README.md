@@ -29,7 +29,7 @@ Flame AI operates as three distinct microservices running locally on your machin
 
 Building a complete "Jarvis" takes time. We must separate features into distinct, manageable phases so you actually finish the project.
 
-### Phase 1: The MVP (Basic Control & Telemetry)
+### Phase 1: The MVP (Basic Control & Telemetry) [**COMPLETED**]
 The goal of the MVP is purely communication. Can the UI see the computer, and can the UI control the computer? No AI yet.
 - **System Telemetry (Read):** Real-time graphs for CPU, RAM, Disk Space, and Network Ping using `psutil`.
 - **App Launcher (Write):** A grid of buttons on the Next.js UI to instantly open specific apps (VS Code, Spotify, Browser) using Python's `subprocess`.
