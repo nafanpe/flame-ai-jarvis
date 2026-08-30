@@ -1,7 +1,8 @@
 # Flame AI (System Assistant)
 
 **Status:** Architecture Design Phase  
-**Tech Stack:** Next.js (TS/Tailwind), Node.js (Express/Socket.io), Python (AI/OS Core)
+**Tech Stack:** Next.js (TS/Tailwind), Node.js (Express/Socket.io), Python (AI/OS Core)  
+**OS Requirements:** Linux-based OS only (currently)
 
 Flame AI is a modular, Jarvis-like assistant designed to provide real-time system monitoring, process management, local application control, and eventually, full autonomous AI capabilities.
 
@@ -63,6 +64,7 @@ The final frontier. True autonomy.
 ## 🛠️ Getting Started
 
 ### Prerequisites
+- **Linux-based Operating System** (Required for OS-level integration)
 - Node.js & npm
 - Python 3
 - Virtual Environment (`venv`)
